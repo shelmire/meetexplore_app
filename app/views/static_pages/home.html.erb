@@ -4,3 +4,18 @@
   This is the home page for Meet Explore.
   </h2>
 </div>
+<% if !user_signed_in? %>
+<div id="loginform">
+  <h3>Log In</h3>
+  <%= form_for(:user, :url => session_path(:user)) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br />
+  <%= f.label :password %>
+  <%= f.password_field :password %><br />
+  <%= f.label :remember_me %>
+  <%= f.check_box :remember_me %><br />
+  <%= link_to "Forgot your password?", new_password_path(:user) %>
+  <%= f.submit 'Sign in' %>
+  <% end %>
+</div>
+<% end %>
