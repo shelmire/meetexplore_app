@@ -9,4 +9,9 @@ class UsersController < ApplicationController
         format.xml { render :xml => @user }
     end
   end
+
+  def index
+  	@users = User.paginate(page: params[:page])
+  end
+  
 end
