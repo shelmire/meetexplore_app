@@ -1,7 +1,19 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
+  before_filter :configure_permitted_parameters
+  def resource_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :display_name, :sex, :birthday, :content, :zip_code) # And whatever other params you need
+  end 
+  
+  private :resource_params
 
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up).push(:name, :display_name, :sex, :birthday, :content, :zip_code)
+    devise_parameter_sanitizer.for(:account_update).push(:name, :display_name, :sex, :birthday, :content, :zip_code)
+  end
   # GET /resource/sign_up
   # def new
   #   super
