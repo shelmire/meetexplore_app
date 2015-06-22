@@ -5,5 +5,9 @@
 # below each fixture, per the syntax in the comments below
 #
 alex:
-  display_name: alex
-  email: alex@example.com
+  display_name: "alex"
+  email: "alex@example.com"
+  name: "Alex"
+  sex: "male"
+  birthday: 08/19/1986
+  zip_code: "19987"
