@@ -11,3 +11,11 @@ alex:
   sex: "male"
   birthday: 08/19/1986
   zip_code: "19987"
+
+abe:
+  display_name: "abe"
+  email: "abe@example.com"
+  name: "Abe"
+  sex: "male"
+  birthday: 11/16/1986
+  zip_code: "90007"

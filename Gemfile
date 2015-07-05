@@ -17,6 +17,7 @@ gem 'jbuilder',     '2.2.3'
 gem 'paperclip', '~> 4.2'
 # use babosa for url normalize
 gem 'babosa'
+gem 'mailboxer' #for messaging system
 gem 'sdoc',         '0.4.0', group: :doc
 
 group :development, :test do
