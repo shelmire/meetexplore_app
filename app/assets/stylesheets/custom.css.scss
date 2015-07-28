@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'chosen';
 
 /* mixins, variables, etc. */
 
@@ -308,4 +309,10 @@ footer {
       margin-left: 15px;
     }
   }
+}
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }

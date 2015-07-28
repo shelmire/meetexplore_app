@@ -3,7 +3,11 @@
   <div class="col-md-6 col-md-offset-3">
     <h1>
       <%= @user.display_name %>
-    </h1><% if @user == current_user %>
+    </h1>
+   <% unless current_user == @user %>
+        <p align="center"><%= link_to 'Send message', new_message_path(to: @user.id), class: 'btn btn-default btn-sm' %></p>
+      <% end %>
+    <% if @user == current_user %>
     <p align="center">THIS IS YOU<br><%= link_to "Edit Profile", edit_user_path(@user) %> <% end %><br>
     <p>Real name: <%= @user.name %>
     <p>Sex: <%= @user.sex %>

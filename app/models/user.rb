@@ -3,4 +3,13 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  acts_as_messageable
+
+  #def name
+  #  display_name
+  #end
+
+  def mailboxer_email(object)
+    email
+  end
 end

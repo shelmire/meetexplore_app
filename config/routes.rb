@@ -4,4 +4,16 @@ Rails.application.routes.draw do
   root             'static_pages#home'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
-  get 'blog'    => 'static_pages#blog'end
+  get 'blog'    => 'static_pages#blog'
+resources :conversations, only: [:index, :show, :destroy] do
+  member do
+    post :reply
+    post :restore
+    post :mark_as_read
+  end
+  collection do
+    delete :empty_trash
+  end
+end
+  resources :messages, only: [:new, :create]
+end

@@ -7,7 +7,7 @@ gem 'bootstrap-sass',       '3.2.0.0' #for using bootstrap
 gem 'faker',                '1.4.2' #for seeds
 gem 'will_paginate',           '3.0.7' #for pagination
 gem 'bootstrap-will_paginate', '0.0.10' #for pagination
-gem 'sass-rails',   '5.0.2'
+gem 'sass-rails',   '5.0.1'
 gem 'uglifier',     '2.5.3'
 gem 'coffee-rails', '4.1.0'
 gem 'jquery-rails', '4.0.3'
@@ -19,6 +19,10 @@ gem 'paperclip', '~> 4.2'
 gem 'babosa'
 gem 'mailboxer' #for messaging system
 gem 'sdoc',         '0.4.0', group: :doc
+gem 'gravatar_image_tag'
+gem 'chosen-rails'
+gem 'jquery-turbolinks'
+gem 'compass-rails', '2.0.4'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
