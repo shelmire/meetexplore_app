@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',        '4.2.1'
 gem 'devise',       '3.5.1' #for generating users and sessions quickly
 gem 'sass',         '3.4.14'
-gem 'bootstrap-sass',       '3.2.0.0' #for using bootstrap
+gem 'bootstrap-sass',       '3.4.1' #for using bootstrap
 gem 'faker',                '1.4.2' #for seeds
 gem 'will_paginate',           '3.0.7' #for pagination
 gem 'bootstrap-will_paginate', '0.0.10' #for pagination
